@@ -1,0 +1,19 @@
+version: "3"
+
+services: 
+    littlecat:
+        build: .
+        ports: 
+            - 8080:8080
+        depends_on: 
+            - postgres
+
+    postgres:
+        image: postgres:latest
+        environment: 
+            - POSTGRES_USER=littlecat
+            - POSTGRES_PASSWORD=littlecat
+            - POSTGRES_DB=littlecatdb
+            - DATABASE_HOST=postgres
+        ports: 
+            - 5432:5432
