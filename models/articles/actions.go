@@ -14,6 +14,7 @@ func GetAllArticles() []Article {
 	return articleList
 }
 
+// GetArticle get specific article by id
 func GetArticle(id int) *Article {
 	for _, article := range articleList {
 		if article.ID == id {
