@@ -1,4 +1,4 @@
-from golang:1.15-alpine
+FROM golang:1.15-alpine
 
 ENV SOURCE_DIR=/usr/go/src/littlecat
 ENV BUILD_DIR=/usr/go/build
